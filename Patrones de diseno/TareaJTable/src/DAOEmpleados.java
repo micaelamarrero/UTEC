@@ -114,9 +114,9 @@ public class DAOEmpleados {
 		String apellido = resultado.getString("APELLIDO");
 		String  cedula = resultado.getString("CEDULA");
 		
-		Empleado empleado = new Empleado(cedula,nombre, apellido);
+		Empleado e = new Empleado(cedula,nombre, apellido);
 		
-		return empleado;
+		return e;
 	
 	}
 	
