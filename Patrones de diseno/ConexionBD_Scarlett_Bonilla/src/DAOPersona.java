@@ -22,7 +22,9 @@ public class DAOPersona {
 		}
 		return cuenta;
 	}
-	
+	/*
+	 * holaaaa
+	 */
 	public static LinkedList<String> findAll(){
 		LinkedList<String> personas = new LinkedList<>();
 		
