@@ -12,7 +12,7 @@ public class DAOEmpleados {
 	private static final String INSERTL_EMPLEADO = "INSERT INTO EMPLEADOS (CEDULA, NOMBRE, APELLIDO) VALUES  (?,?,?)";
 	private static final String UPDATE_EMPLEADO = "UPDATE EMPLEADOS SET  NOMBRE=?, APELLIDO=? WHERE CEDULA =?";
 	private static final String DELETE_EMPLEADO = "DELETE FROM EMPLEADOS WHERE CEDULA=?";
-	private static final String EMPLEADO_CI = "SELECT * FROM EMPLEADOS WHERE CEDULA=?";
+	private static final String FINDEMPLEADO_CI = "SELECT * FROM EMPLEADOS WHERE CEDULA=?";
 	
 	
 	public static boolean insert (Empleado empleado){
@@ -89,7 +89,7 @@ public class DAOEmpleados {
 
 	public static Empleado find(String ciEmpleado){
 		try {
-			PreparedStatement statement = DatabaseManager.getConnection().prepareStatement(EMPLEADO_CI);
+			PreparedStatement statement = DatabaseManager.getConnection().prepareStatement(FINDEMPLEADO_CI);
 			statement.setString(1, ciEmpleado);
 			
 			ResultSet resultado = statement.executeQuery();
